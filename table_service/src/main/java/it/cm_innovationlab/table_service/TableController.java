@@ -4,10 +4,12 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+@CrossOrigin("http://www.cm-innovationlab.it:8080") //This is necessary because test page is running on Tomcat 8080 and this service 8081
 @RestController //This annotation create a controller where every method returns a domain object instead of a view.
 public class TableController {
 

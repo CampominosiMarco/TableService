@@ -10,11 +10,14 @@
 	</parent>
 	<groupId>it.cm_innovationlab</groupId>
 	<artifactId>table_service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2</version>
 	<name>table_service</name>
-	<description>Spring Boot Table Service</description>
+	<description>Spring Boot Table Service
+		- 0.0.1: First version
+		- 0.0.2: Unit Test
+	</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>20</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -23,15 +26,15 @@
 		</dependency>
 		
 		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20230618</version>
+		</dependency>
+
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.json</groupId>
-			<artifactId>json</artifactId>
-			<version>20230227</version>
 		</dependency>
 	</dependencies>
 

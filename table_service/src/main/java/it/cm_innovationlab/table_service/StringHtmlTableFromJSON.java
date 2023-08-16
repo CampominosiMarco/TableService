@@ -12,6 +12,7 @@ public class StringHtmlTableFromJSON{
     private JSONArray header;
     private JSONObject body;
     private String tips = "";
+    private String content;
 
     private final int columnNumber;
 
@@ -25,6 +26,7 @@ public class StringHtmlTableFromJSON{
         this.header = header;
         this.body = body;
         this.columnNumber = header.length();
+        setTableContent();
     }
 
     public long getId() {
@@ -64,7 +66,11 @@ public class StringHtmlTableFromJSON{
     }
 
     public String getTableContent() {
+        return this.content;
+    }
 
+    private void setTableContent() {
+        
         String headerOutput = "";
         String bodyOutput = "";
 
@@ -84,7 +90,7 @@ public class StringHtmlTableFromJSON{
             bodyOutput += String.format(rowTemplate, bodySingleLine);
         }
 
-        return String.format(tableTemplate, headerOutput + bodyOutput);
+        this.content = String.format(tableTemplate, headerOutput + bodyOutput);
     }
 
     public String getTips() {
